@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px; /* ridotto per dare più spazio alla griglia */
+}
+
+.titolo-centrale {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+}
+
+#controlli-settimana {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#settimana {
+    display: grid;
+    grid-template-columns: repeat(7, 1.5fr); /* Aumenta la larghezza delle colonne */
+    gap: 10px; /* Aumenta lo spazio tra le caselle */
+    margin-bottom: 20px;
+    justify-content: start; /* Allinea la griglia a sinistra */
+    width: 100%; /* La griglia occupa tutta la larghezza */
+}
+
+.giorno {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #f9f7f7;
+    border-radius: 4px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-giorno {
+    display: flex;
+    justify-content: flex-start; /* Allinea la data a sinistra */
+    align-items: center; /* Allinea verticalmente al centro */
+    margin-bottom: 10px;
+}
+
+.header-giorno h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+    flex-grow: 1; /* Questo fa sì che il titolo occupi lo spazio necessario */
+}
+
+.lista-appuntamenti {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-appuntamenti li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.lista-appuntamenti li button {
+    margin-left: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.lista-appuntamenti li button:hover {
+    background-color: #c82333;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+/* styles.css */
+.giorno {
+    transition: all 0.3s ease;
+    width: 60%; /* Aggiungi per evitare che si restringa troppo quando espanso */
+    overflow: hidden;
+}
+
+.giorno.espanso {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    border-radius: 8px; /* Arrotonda gli angoli per un aspetto più gradevole */
+}
+
+.giorno.espanso h3 {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+/* Stile per la X di chiusura */
+.chiudi-espanso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+
+    @media (max-width: 768px) {
+        /* Regole CSS specifiche per schermi con larghezza inferiore a 768px */
+      }
+      
+    
+}

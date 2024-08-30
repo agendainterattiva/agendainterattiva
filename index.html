@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Interattiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titolo-centrale">Agenda Interattiva</h1>
+
+    <div id="controlli-settimana">
+        <button id="prevWeek">&lt; Settimana precedente</button>
+        <span id="range-settimana"></span>
+        <button id="nextWeek">Settimana successiva &gt;</button>
+    </div>
+
+    <div id="settimana">
+      <!-- I giorni della settimana verranno generati dinamicamente con JavaScript -->
+    </div>
+
+    <form id="appuntamento-form">
+        <h2>Inserisci Paziente</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required>
+
+        <label for="telefono">telefono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="ora">Ora:</label>
+        <input type="time" id="ora" name="ora" required>
+
+        <label for="motivo">Motivo della visita:</label>
+        <input type="text" id="motivo" name="motivo" required>
+
+        <button type="submit">Salva Appuntamento</button>
+    </form> 
+    <script src="script.js"></script>
+</body>
+</html>
+
+<ul class="lista-appuntamenti" data-giorno="${giorno.toISOString().split('T')[0]}"></ul>
+
+
